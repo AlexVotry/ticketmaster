@@ -6,7 +6,6 @@ import useRequest from '../../hooks/use-request';
 export default function EmailPassword ({title}) {
   const [email, setEmail] = useState('');
   const endPoint = title.toLowerCase().replace(' ', '');
-  console.log('endpoint:', endPoint);
   const [password, setPassword] = useState('');
   const { doRequest, errors} = useRequest({
     url: `/api/users/${endPoint}`,
